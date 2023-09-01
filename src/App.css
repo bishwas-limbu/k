@@ -1,0 +1,22 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@300&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans:wght@500&family=Roboto:wght@300&display=swap');
+
+.hoverEffect:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.titleFont {
+    font-family: 'Lilita One', cursive;
+}
+.fontProduct{
+  
+  font-family: 'Roboto', sans-serif;
+}
+.fontProductTitle{
+  font-family: 'Open Sans', sans-serif;
+}
