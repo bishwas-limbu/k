@@ -3,6 +3,8 @@ import { useSelector,useDispatch } from 'react-redux';
 import { Link,useNavigate} from 'react-router-dom';
 import { setSearchProduct } from '../slice/sliceProductList';
 import {AiOutlineShoppingCart} from 'react-icons/ai';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const NavBar = () => {
     const  dispatch = useDispatch();
@@ -24,7 +26,16 @@ const NavBar = () => {
           navigate("/search");
 
       }else{
-        alert("Please, enter Something inside search bar to search product.")
+        toast.warn('Please, Enter something to search product.', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       }
     }
     const handleSearchBar = (e:any) => {
@@ -42,6 +53,17 @@ const NavBar = () => {
           dispatch(setSearchProduct(filterProduct));
           navigate("/search");
         }
+      }else{
+        toast.warn('Please, Enter something to search product.', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          });
       }
     }
 
@@ -65,6 +87,7 @@ const NavBar = () => {
             />
             <div className='px-2'>
             <button className="btn btn-outline-success" onClick={handleSearchClick}>Search</button>
+            <ToastContainer />
             </div>
           </div>
         </nav>
